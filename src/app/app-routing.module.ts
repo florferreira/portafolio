@@ -3,8 +3,23 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:"",
-    loadChildren:()=>import('./pages/pages.module').then((m)=>m.PagesModule)
+    path:"proyectos",
+    loadChildren:()=> import('./proyectos/proyectos.module').then(m=>m.ProyectosModule)
+    
+  },
+  {
+    path:'contacto',
+    loadChildren:()=> import('./contacto/contacto.module').then(m=>m.ContactoModule)
+
+  },
+  {
+    path:'about',
+    loadChildren:()=> import('./about/about.module').then(m=>m.AboutModule)
+
+  },
+  {
+    path:'**',
+    redirectTo:'proyectos'
   }
 ];
 
@@ -13,4 +28,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-  
+    

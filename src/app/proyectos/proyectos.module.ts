@@ -3,15 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { ProyectosRoutingModule } from './proyectos-routing.module';
 import { ProyectosComponent } from './proyectos.component';
+import { RouterModule } from '@angular/router';
+import { InformacionComponent } from './informacion/informacion.component';
 
 
 @NgModule({
   declarations: [
-    ProyectosComponent
+    ProyectosComponent,
+    InformacionComponent
   ],
   imports: [
     CommonModule,
-    ProyectosRoutingModule
+    ProyectosRoutingModule,
+    RouterModule
   ]
 })
 export class ProyectosModule { }

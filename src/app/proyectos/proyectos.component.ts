@@ -18,4 +18,8 @@ export class ProyectosComponent implements OnInit {
   get data(){
     return this.proyectosDataservice.data
   }
+
+  getURI(nombre:string){
+    return encodeURI(nombre)
+  }
 }
